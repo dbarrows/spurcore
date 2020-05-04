@@ -2,7 +2,7 @@
 #'
 #' @param dims the dimensions of the system in the order (x, y, z)
 #' @param h the side length of each cubic voxel
-#' @param seed optional vector containing the initial state value for each voxel in the order returned by \code{species(network)}
+#' @param seed optional vector containing the initial state value for each voxel in the order returned by `species(network)`
 #' 
 #' @return an instance of the \code{volume} class
 #' @useDynLib spurcore, .registration = TRUE

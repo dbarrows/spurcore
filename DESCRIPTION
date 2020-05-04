@@ -15,7 +15,12 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Imports:
     Rcpp,
-    RcppArmadillo
+    RcppArmadillo,
+    methods,
+    crayon,
+    magrittr,
+    stringr,
+    tibble
 LinkingTo: 
     Rcpp,
     RcppArmadillo
