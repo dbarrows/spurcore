@@ -11,6 +11,7 @@ template <typename T>
 class array3 {
 public:
     uvec3 dims;
+    vector<T> data;
 
     array3() : array3(uvec3 { 0, 0, 0 }) {}
     array3(uvec3 dims, T seed = T()) : array3(dims[0], dims[1], dims[2], seed) {}
@@ -40,9 +41,6 @@ public:
     T& operator [](uvec3 i) { return data[index(i)]; }
 
     array3<T> copy() const;
-
-private:
-    vector<T> data;
 };
 
 template <typename T>
