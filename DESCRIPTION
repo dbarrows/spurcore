@@ -1,0 +1,21 @@
+Package: spurcore
+Title: Core classes and utilities for spur packages
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Dexter",
+           family = "Barrows",
+           role = c("aut", "cre"),
+           email = "dexter@barrows.io",
+           comment = c(ORCID = "0000-0001-8169-8938"))
+Description: Core classes and utilities for spur packages.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Imports:
+    Rcpp,
+    RcppArmadillo
+LinkingTo: 
+    Rcpp,
+    RcppArmadillo
