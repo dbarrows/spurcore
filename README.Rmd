@@ -1,0 +1,33 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "#>",
+    dev = 'svglite',
+    fig.path = "man/figures/README-",
+    fig.showtext = TRUE,
+    fig.width = 6.377953,
+    fig.height = 3.93701,
+    out.width = "100%"
+)
+```
+
+# spurcore
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Provides a core set of classes and utilities that the spur packages build on top of.
+
+## Installation
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+```r
+devtools::install_github("dbarrows/spurcore")
+```
