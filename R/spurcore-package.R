@@ -12,6 +12,7 @@
 #' @importFrom magrittr %>%
 #' @importFrom tibble as_tibble
 #' @importFrom stringr str_c
+#' @useDynLib spurcore, .registration = TRUE
 NULL
 
 ## quiets concerns of R CMD check re:

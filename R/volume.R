@@ -5,7 +5,6 @@
 #' @param seed optional vector containing the initial state value for each voxel in the order returned by `species(network)`
 #' 
 #' @return an instance of the \code{volume} class
-#' @useDynLib spurcore, .registration = TRUE
 #' @export
 volume <- function(dims, h, seed = numeric()) {
     structure(
