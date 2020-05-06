@@ -8,6 +8,8 @@ Authors@R:
            email = "dexter@barrows.io",
            comment = c(ORCID = "0000-0001-8169-8938"))
 Description: Core classes and utilities for spur packages.
+URL: https://github.com/dbarrows/spurcore
+BugReports: https://github.com/dbarrows/spurcore/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

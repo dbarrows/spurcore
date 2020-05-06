@@ -1,4 +1,6 @@
-#' Volume class for setting initial conditions of inhomogeneous systems
+#' Volume class
+#' 
+#' For setting initial conditions of inhomogeneous systems
 #'
 #' @param dims the dimensions of the system in the order (x, y, z)
 #' @param h the side length of each cubic voxel

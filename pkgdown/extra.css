@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inconsolata&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 18pt;
+    margin-top: 10rem;
+}
+.page-header {
+    border-bottom: revert;
+}
+
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 16pt;
+}
+body {
+    font-family: 'EB Garamond', serif;
+}
+p {
+    font-size: 13pt;
+}
+code, pre {
+    font-family: "Inconsolata", monospace;
+    font-size: 11pt;
+    background: #f8f8f8;
+}
+
+a:link {
+    text-decoration-thickness: 0.05em;
+    text-underline-offset: 0.2em;
+    text-decoration-color: #404040;
+}
+#pkgdown-sidebar a:link {
+    color: #000000;
+    text-decoration: underline;
+}
+p a:link {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.navbar {
+    border: none;
+    color: #000000;
+    background: #ffffff;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.1em;
+    height: 8rem;
+}
+.navbar-default .navbar-link, .navbar-default .navbar-nav>li>a {
+    color: #000000;
+}
+.navbar-default .navbar-link:hover {
+    color: #000000;
+}
+.navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus,
+    .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #000000;
+    background-color: #ffffff;
+}
+.navbar-default .navbar-nav>.active>a:hover,
+    .navbar-default .navbar-nav>li>a:hover {
+    text-decoration: underline;
+}

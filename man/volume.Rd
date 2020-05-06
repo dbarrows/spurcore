@@ -2,7 +2,7 @@
 % Please edit documentation in R/volume.R
 \name{volume}
 \alias{volume}
-\title{Volume class for setting initial conditions of inhomogeneous systems}
+\title{Volume class}
 \usage{
 volume(dims, h, seed = numeric())
 }
@@ -17,5 +17,5 @@ volume(dims, h, seed = numeric())
 an instance of the \code{volume} class
 }
 \description{
-Volume class for setting initial conditions of inhomogeneous systems
+For setting initial conditions of inhomogeneous systems
 }

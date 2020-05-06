@@ -1,0 +1,15 @@
+url: https://github.com/dbarrows/spurcore
+
+template:
+    params:
+        bootswatch: yeti
+
+navbar:
+    structure:
+        left:  [home, reference]
+        right: [github]
+
+reference:
+- title: "Volume"
+- contents:
+    - starts_with("volume")
