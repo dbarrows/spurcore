@@ -2,13 +2,13 @@ url: https://github.com/dbarrows/spurcore
 
 template:
     params:
-        bootswatch: yeti
-        highlight: monochrome
+        bootswatch: flatly
 
 navbar:
     structure:
-        left:  [reference]
-        right: [github]
+        left: [github, reference]
+    components:
+        home: ~
 
 reference:
 - title: "Volume"

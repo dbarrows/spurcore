@@ -7,12 +7,12 @@
 volume_get(volume, index)
 }
 \arguments{
-\item{volume}{an instance of the \code{volume} class}
+\item{volume}{an instance of the \code{\link[=volume]{volume()}} class}
 
 \item{index}{the index (x, y, z) of the voxel to get the vector of species quantities}
 }
 \value{
-vector of species quantities in the order returned by \code{species(network)}
+Vector of species quantities
 }
 \description{
 Get reaction system state

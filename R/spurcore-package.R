@@ -1,4 +1,4 @@
-#' \code{spurcore} package
+#' `spurcore` package
 #'
 #' Core classes and utilities for spur packages
 #'

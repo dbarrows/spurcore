@@ -1,12 +1,12 @@
 #' Volume class
 #' 
-#' For setting initial conditions of inhomogeneous systems
+#' For setting initial conditions of inhomogeneous systems.
 #'
 #' @param dims the dimensions of the system in the order (x, y, z)
 #' @param h the side length of each cubic voxel
 #' @param seed optional vector containing the initial state value for each voxel in the order returned by `species(network)`
 #' 
-#' @return an instance of the \code{volume} class
+#' @return An instance of the [volume()] class
 #' @export
 volume <- function(dims, h, seed = numeric()) {
     structure(
@@ -17,9 +17,9 @@ volume <- function(dims, h, seed = numeric()) {
 
 #' Set reaction system state
 #' 
-#' @param volume an instance of the \code{volume} class
+#' @param volume an instance of the [volume()] class
 #' @param index the index (x, y, z) of the voxel to assign the state to
-#' @param state vector of species quantities in the order returned by \code{species(network)}
+#' @param state vector of species quantities
 #' 
 #' @export
 volume_set <- function(volume, index, state) {
@@ -28,10 +28,10 @@ volume_set <- function(volume, index, state) {
 
 #' Get reaction system state
 #' 
-#' @param volume an instance of the \code{volume} class
+#' @param volume an instance of the [volume()] class
 #' @param index the index (x, y, z) of the voxel to get the vector of species quantities
 #' 
-#' @return vector of species quantities in the order returned by \code{species(network)}
+#' @return Vector of species quantities
 #' @export
 volume_get <- function(volume, index) {
     volume$cpp$get(index)
@@ -39,9 +39,9 @@ volume_get <- function(volume, index) {
 
 #' Volume dimensions
 #' 
-#' @param volume an instance of the \code{volume} class
+#' @param volume an instance of the [volume()] class
 #' 
-#' @return the dimensions of the system in the order (x, y, z)
+#' @return Dimensions of the system in the order (x, y, z).
 #' @export
 volume_dims <- function(volume) {
     volume$cpp$dims
@@ -49,21 +49,21 @@ volume_dims <- function(volume) {
 
 #' Voxel side length
 #' 
-#' @param volume an instance of the \code{volume} class
+#' @param volume an instance of the [volume()] class
 #' 
-#' @return the side length of each voxel
+#' @return Side length of each voxel
 #' @export
 volume_h <- function(volume) {
     volume$cpp$h
 }
 
-#' Volume states in table format
+#' Volume states
 #' 
-#' @param volume an instance of the \code{volume} class
+#' @param volume an instance of the [volume()] class
 #' @param species an optional vector of species names to be used in the output header
 #' @param ... additional options
 #' 
-#' @return the states of \code{volume} as a \code{tibble}
+#' @return States of [volume()] as a [tibble::tibble()]
 #' @export
 volume_states <- function(volume, species = NULL, ...) {
     dims <- volume_dims(volume)
