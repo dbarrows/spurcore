@@ -7,4 +7,4 @@ readme:
 check:
 	@Rscript -e 'devtools::check()'
 site:
-	@Rscript -e "devtools::document(); pkgdown::deploy_to_branch()"
+	@Rscript -e "devtools::document(); pkgdown::build_site()"
