@@ -34,7 +34,7 @@ volume_set <- function(volume, index, state) {
 #' @return Vector of species quantities
 #' @export
 volume_get <- function(volume, index) {
-    volume$cpp$get(index)
+    volume$cpp$get(index) %>% as.vector()
 }
 
 #' Volume dimensions
@@ -44,7 +44,7 @@ volume_get <- function(volume, index) {
 #' @return Dimensions of the system in the order (x, y, z).
 #' @export
 volume_dims <- function(volume) {
-    volume$cpp$dims
+    volume$cpp$dims %>% as.vector()
 }
 
 #' Voxel side length
