@@ -2,7 +2,7 @@ url: https://github.com/dbarrows/spurcore
 
 template:
     params:
-        bootswatch: yeti
+        bootswatch: flatly
 
 navbar:
     structure:
