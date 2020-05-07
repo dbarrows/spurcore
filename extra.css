@@ -8,7 +8,8 @@ h1 {
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 18pt;
+    font-size: 20pt;
+    margin-bottom: 1em;
 }
 .page-header {
     border-bottom: revert;
@@ -18,7 +19,7 @@ h2 {
     font-family: 'EB Garamond', serif;
     font-weight: 600;
     font-style: italic;
-    font-size: 18pt;
+    font-size: 17pt;
 }
 h3 {
     font-family: 'EB Garamond', serif;
