@@ -14,3 +14,6 @@ jobs:
       - name: Make site
         run: pkgdown::build_site()
         shell: Rscript --vanilla {0}
+      - name: Publish site
+        run: pkgdown::deploy_to_branch()
+        shell: Rscript --vanilla {0}
