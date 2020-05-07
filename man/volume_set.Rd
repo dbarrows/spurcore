@@ -7,11 +7,11 @@
 volume_set(volume, index, state)
 }
 \arguments{
-\item{volume}{an instance of the \code{\link[=volume]{volume()}} class}
+\item{volume}{an instance of the \code{\link{volume}} class}
 
-\item{index}{the index (x, y, z) of the voxel to assign the state to}
+\item{index}{\code{\link{vector}} of the index (x, y, z) of the voxel to assign the state to}
 
-\item{state}{vector of species quantities}
+\item{state}{\code{\link{vector}} of species quantities}
 }
 \description{
 Set reaction system state

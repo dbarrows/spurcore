@@ -7,14 +7,14 @@
 volume(dims, h, seed = numeric())
 }
 \arguments{
-\item{dims}{the dimensions of the system in the order (x, y, z)}
+\item{dims}{\code{\link{vector}} of the dimensions of the system in the order (x, y, z)}
 
 \item{h}{the side length of each cubic voxel}
 
-\item{seed}{optional vector containing the initial state value for each voxel in the order returned by \code{species(network)}}
+\item{seed}{optional \code{\link{vector}} containing the initial state value for each voxel}
 }
 \value{
-An instance of the \code{\link[=volume]{volume()}} class
+An instance of the \code{\link{volume}} class
 }
 \description{
 For setting initial conditions of inhomogeneous systems.

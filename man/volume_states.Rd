@@ -7,14 +7,14 @@
 volume_states(volume, species = NULL, ...)
 }
 \arguments{
-\item{volume}{an instance of the \code{\link[=volume]{volume()}} class}
+\item{volume}{an instance of the \code{\link{volume}} class}
 
-\item{species}{an optional vector of species names to be used in the output header}
+\item{species}{an optional \code{\link{vector}} of species names to be used in the output header}
 
 \item{...}{additional options}
 }
 \value{
-States of \code{\link[=volume]{volume()}} as a \code{\link[tibble:tibble]{tibble::tibble()}}
+States of \code{\link{volume}} as a \code{\link[tibble:tibble]{tibble::tibble}}
 }
 \description{
 Volume states

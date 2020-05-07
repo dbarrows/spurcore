@@ -7,7 +7,7 @@
 volume_h(volume)
 }
 \arguments{
-\item{volume}{an instance of the \code{\link[=volume]{volume()}} class}
+\item{volume}{an instance of the \code{\link{volume}} class}
 }
 \value{
 Side length of each voxel

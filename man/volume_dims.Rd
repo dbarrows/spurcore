@@ -7,10 +7,10 @@
 volume_dims(volume)
 }
 \arguments{
-\item{volume}{an instance of the \code{\link[=volume]{volume()}} class}
+\item{volume}{an instance of the \code{\link{volume}} class}
 }
 \value{
-Dimensions of the system in the order (x, y, z).
+\code{\link{vector}} of dimensions of the system in the order (x, y, z).
 }
 \description{
 Volume dimensions
