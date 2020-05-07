@@ -1,4 +1,4 @@
-.PHONEY: install, readme, check, site
+.PHONEY: install, readme, check, site, release
 install:
 	@Rscript -e 'devtools::install()'
 readme:
@@ -8,3 +8,5 @@ check:
 	@Rscript -e 'devtools::check()'
 site:
 	@Rscript -e "devtools::document(); pkgdown::build_site()"
+release:
+	@make check && make site

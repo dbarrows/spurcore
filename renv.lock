@@ -11,10 +11,10 @@
   "Packages": {
     "MASS": {
       "Package": "MASS",
-      "Version": "7.3-51.5",
+      "Version": "7.3-51.6",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "9efe80472b21189ebab1b74169808c26"
+      "Hash": "1dad32ac9dbd8057167b2979fb932ff7"
     },
     "R6": {
       "Package": "R6",
@@ -277,10 +277,10 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.9.3",
+      "Version": "0.10.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "c1a367437d8a8a44bec4b9d4974cb20c"
+      "Hash": "0d3f1c2b63e70b3d918246b4e2ca59b7"
     },
     "rlang": {
       "Package": "rlang",
