@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - master
+
+name: Publish site
+
+jobs:
+  R-CMD-check:
+    runs-on: ubuntu-latest
+    container: dbarrows/spur-image
+    steps:
+      - uses: actions/checkout@v2
+      - name: Document
+        run: devtools::document()
+        shell: Rscript --vanilla -e {0}
+      - name: Make site
+        run: pkgdown::build_site()
+        shell: Rscript --vanilla -e {0}
