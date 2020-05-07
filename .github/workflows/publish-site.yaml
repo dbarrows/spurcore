@@ -6,7 +6,7 @@ on:
 name: Publish site
 
 jobs:
-  R-CMD-check:
+  publish-site:
     runs-on: ubuntu-latest
     container: dbarrows/spur-image
     steps:
