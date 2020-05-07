@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
-          remotes::install_github("jimhester/pkgdown@github-actions-deploy")
+          remotes::install_dev("pkgdown")
         shell: Rscript --vanilla {0}
       - name: Publish
         run: pkgdown::deploy_to_branch(new_process = FALSE)
