@@ -11,9 +11,6 @@ jobs:
     container: dbarrows/spur-image
     steps:
       - uses: actions/checkout@master
-      - name: Document
-        run: devtools::document()
-        shell: Rscript --vanilla {0}
       - name: Make site
         run: pkgdown::build_site()
         shell: Rscript --vanilla {0}
