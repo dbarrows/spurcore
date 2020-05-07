@@ -6,6 +6,7 @@
 #' @name spurcore
 #' 
 #' @import Rcpp
+#' @import RcppArmadillo
 #' @importFrom Rcpp evalCpp
 #' @importFrom methods new
 #' @importFrom crayon blurred blue silver
