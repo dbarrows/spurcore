@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Document
         run: devtools::document()
-        shell: Rscript --vanilla -e {0}
+        shell: Rscript --vanilla {0}
       - name: Make site
         run: pkgdown::build_site()
-        shell: Rscript --vanilla -e {0}
+        shell: Rscript --vanilla {0}
