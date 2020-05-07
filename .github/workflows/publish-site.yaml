@@ -3,7 +3,7 @@ on:
     branches:
       - master
 
-name: Publish site
+name: publish-site
 
 jobs:
   publish-site:
