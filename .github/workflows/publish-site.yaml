@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     container: dbarrows/spur-image
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
       - name: Document
         run: devtools::document()
         shell: Rscript --vanilla {0}

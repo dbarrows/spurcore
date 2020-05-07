@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: dbarrows/spur-image
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
       - name: Install dependencies
         run: remotes::install_deps(dependencies = TRUE)
         shell: Rscript --vanilla {0}
