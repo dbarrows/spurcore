@@ -57,6 +57,7 @@ a:link {
     text-decoration-color: #404040;
 }
 p > a,
+p > a:hover,
 #pkgdown-sidebar a,
 td:nth-child(1) > p > code > a {
     color: #000000;
