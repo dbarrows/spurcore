@@ -2,7 +2,7 @@ context("Volume")
 library(spurcore)
 library(magrittr)
 
-test_that("Volume constructor works", {
+test_that("Volume constructor", {
     vol <- volume(c(1, 1, 1), 1, seed = c(1, 2))
     expect_equal(
         vol$cpp$dims %>% as.vector(),
@@ -18,7 +18,7 @@ test_that("Volume constructor works", {
     )
 })
 
-test_that("Accessors work", {
+test_that("Accessors", {
     vol <- volume(c(2, 1, 1), 1, seed = c(1, 2))
     expect_equal(
         volume_dims(vol),
@@ -34,7 +34,7 @@ test_that("Accessors work", {
     )
 })
 
-test_that("State setter works", {
+test_that("State setter", {
     vol <- volume(c(2, 1, 1), 1, seed = c(1, 2))
     volume_set(vol, c(2, 1, 1), c(3, 4))
     expect_equal(

@@ -235,10 +235,10 @@
     },
     "pkgbuild": {
       "Package": "pkgbuild",
-      "Version": "1.0.7",
+      "Version": "1.0.8",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "4c2692dda4c30c71209da02ebbfa0258"
+      "Hash": "8d8b5e29223aabb829246397299f0592"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
