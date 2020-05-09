@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/dbarrows/spurcore/index.html</loc>
+    <loc>http://dexter.barrows.io/spurcore/index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/dbarrows/spurcore/reference/spurcore.html</loc>
+    <loc>http://dexter.barrows.io/spurcore/reference/spurcore.html</loc>
   </url>
   <url>
-    <loc>https://github.com/dbarrows/spurcore/reference/volume.html</loc>
+    <loc>http://dexter.barrows.io/spurcore/reference/volume.html</loc>
   </url>
   <url>
-    <loc>https://github.com/dbarrows/spurcore/reference/volume_dims.html</loc>
+    <loc>http://dexter.barrows.io/spurcore/reference/volume_dims.html</loc>
   </url>
   <url>
-    <loc>https://github.com/dbarrows/spurcore/reference/volume_get.html</loc>
+    <loc>http://dexter.barrows.io/spurcore/reference/volume_get.html</loc>
   </url>
   <url>
-    <loc>https://github.com/dbarrows/spurcore/reference/volume_h.html</loc>
+    <loc>http://dexter.barrows.io/spurcore/reference/volume_h.html</loc>
   </url>
   <url>
-    <loc>https://github.com/dbarrows/spurcore/reference/volume_set.html</loc>
+    <loc>http://dexter.barrows.io/spurcore/reference/volume_set.html</loc>
   </url>
   <url>
-    <loc>https://github.com/dbarrows/spurcore/reference/volume_states.html</loc>
+    <loc>http://dexter.barrows.io/spurcore/reference/volume_states.html</loc>
   </url>
 </urlset>
