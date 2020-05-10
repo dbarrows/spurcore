@@ -68,11 +68,10 @@ volume_h <- function(volume) {
 volume_states <- function(volume, species = NULL, ...) {
     dims <- volume_dims(volume)
     df_index <- expand.grid(x = 1:dims[1], y = 1:dims[2], z = 1:dims[3])
-    df_state <- sapply(1:nrow(df_index), function(i) {
+    df_state <- lapply(1:nrow(df_index), function(i) {
             s <- df_index[i,] %>% as.numeric() %>% volume_get(volume, .)
         }) %>%
-        t() %>%
-        rbind() %>%
+        do.call(rbind, .) %>%
         as.data.frame()
     names(df_state) <- if(is.null(species)) str_c("S", 1:ncol(df_state)) else species
     cbind(df_index, df_state) %>% as_tibble()
