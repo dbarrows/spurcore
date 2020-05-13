@@ -60,7 +60,7 @@ array3<T> array3<T>::copy() const {
 }
 
 template <typename S>
-static vector<S> flatten(const array3<vector<S>>& a) {
+static vector<S> flatten(array3<vector<S>>& a) {
     auto v = vector<S>();
     for (uint i = 0; i < a.size(); i++)
         for (uint j = 0; j < a[i].size(); j++)
