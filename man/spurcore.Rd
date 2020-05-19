@@ -3,7 +3,7 @@
 \docType{package}
 \name{spurcore}
 \alias{spurcore}
-\title{\code{spurcore} package}
+\title{\code{\link{spurcore}} package}
 \description{
 Core classes and utilities for spur packages
 }
