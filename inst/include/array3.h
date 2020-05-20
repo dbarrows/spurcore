@@ -28,7 +28,7 @@ public:
     }
     uvec3 index3(uint i) const;
     uint size() const {
-        return dims[0] * dims[1] * dims[2];
+        return prod(dims);
     }
 
     T operator ()(uint x, uint y, uint z) const {return data[index(x, y, z)]; }
@@ -57,6 +57,34 @@ array3<T>& array3<T>::operator=(const array3<T>& other) {
     data = vector<T>(other.data.size());
     copy(other.data.begin(), other.data.end(), data.begin());
     return *this;
+}
+
+template <typename T>
+array3<T> operator*(float x, array3<T>& a) {
+    auto out = a;
+    for (uint i = 0; i < a.size(); i++)
+        out[i] = x*a[i];
+    return out;
+}
+template <typename T>
+array3<T> operator*(array3<T>& a, float x) {
+    return x*a;
+}
+
+template <typename T>
+array3<T> operator+(const array3<T>& x, const array3<T>& y) {
+    auto out = x;
+    for (uint i = 0; i < out.size(); i++)
+        out[i] += y[i];
+    return out;
+}
+
+template <typename T>
+array3<T> round(const array3<T>& x) {
+    auto out = x;
+    for (uint i = 0; i < out.size(); i++)
+        out[i] = round(x[i]);
+    return out;
 }
 
 template <typename S>

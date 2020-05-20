@@ -7,21 +7,6 @@
 // hashing and equality functions for arma::uvec3.
 // Required to use arma::uvec3 as a key in std::map.
 
-namespace core {
-
-using namespace std;
-using namespace arma;
-
-template <typename VOUT, typename VIN>
-inline VOUT vector_cast(VIN v) {
-    VOUT out = VOUT(v.size());
-    for (uint i = 0; i < v.size(); i++)
-        out[i] = v[i];
-    return out;
-}
-
-}
-
 namespace std {
 
 template <>
