@@ -18,6 +18,7 @@ public:
     volume(uvec dims, double h, vec seed) : h(h) {
         state = array3<vec>(dims[0], dims[1], dims[2], seed);
     }
+    volume(array3<vec>& state, double h) : state(state), h(h) {}
 
     void set(uvec index, vec v) {
         state(index[0] - 1, index[1] - 1, index[2] - 1) = v;

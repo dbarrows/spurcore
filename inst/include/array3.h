@@ -40,7 +40,7 @@ public:
     T operator [](uvec3 i) const { return data[index(i)]; }
     T& operator [](uvec3 i) { return data[index(i)]; }
 
-    array3<T> copy() const;
+    array3<T>& operator=(const array3<T>& other);
 };
 
 template <typename T>
@@ -52,11 +52,11 @@ uvec3 array3<T>::index3(uint i) const {
 }
 
 template <typename T>
-array3<T> array3<T>::copy() const {
-    auto c = array3<T>(dims);
-    for (uint i = 0; i < size(); i++)
-        c[i] = data[i];
-    return c;
+array3<T>& array3<T>::operator=(const array3<T>& other) {
+    dims = other.dims;
+    data = vector<T>(other.data.size());
+    copy(other.data.begin(), other.data.end(), data.begin());
+    return *this;
 }
 
 template <typename S>
