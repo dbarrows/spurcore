@@ -6,6 +6,7 @@ namespace core {
 
 using namespace arma;
 using namespace std;
+using uint = unsigned int;
 
 template <typename T>
 class array3 {
