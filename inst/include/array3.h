@@ -6,7 +6,7 @@ namespace core {
 
 using namespace arma;
 using namespace std;
-using uint = unsigned int;
+using uint = unsigned int; // needed for compilation on Windows
 
 template <typename T>
 class array3 {
