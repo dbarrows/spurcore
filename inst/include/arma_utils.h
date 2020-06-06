@@ -13,9 +13,9 @@ template <>
 struct hash<typename arma::uvec3> {
     std::size_t operator()(const typename arma::uvec3& k) const {
         size_t res = 17;
-        res *= 31 + std::hash<uint>()(k[0]);
-        res *= 31 + std::hash<uint>()(k[1]);
-        res *= 31 + std::hash<uint>()(k[2]);
+        res *= 31 + std::hash<unsigned int>()(k[0]);
+        res *= 31 + std::hash<unsigned int>()(k[1]);
+        res *= 31 + std::hash<unsigned int>()(k[2]);
         return res;
     }
 };
