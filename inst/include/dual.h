@@ -99,21 +99,21 @@ inline dual operator/(const A& a, const dual& x) {
 }
 
 // --- << ---------------------------------------
-ostream& operator<<(ostream& os, const dual& x) {
+inline ostream& operator<<(ostream& os, const dual& x) {
     os << "(" << x.r << " + " << x.e << "e)";
     return os;
 }
 
 // --- arma converters ----------------------------------------------------------------------------
 
-vector<dual> dual_vec(vec& sv) {
+inline vector<dual> dual_vec(vec& sv) {
     auto dv = vector<dual>(sv.size());
     transform(sv.begin(), sv.end(), dv.begin(),
               [](const double s){ return dual(s); });
     return dv;
 }
 
-vec single_vec(vector<dual>& dv) {
+inline vec single_vec(vector<dual>& dv) {
     vec sv = vec(dv.size());
     transform(dv.begin(), dv.end(), sv.begin(),
               [](const dual& d){ return d.r; });
