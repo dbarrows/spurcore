@@ -77,13 +77,20 @@ ostream& operator<<(ostream& os, const dual& x) {
     return os;
 }
 
-// --- arma ---------------------------------------------------------------------------------------
+// --- arma converters ----------------------------------------------------------------------------
 
-vector<dual> dual_vec(vec& av) {
-    auto v = vector<dual>(av.size());
-    for (uint i = 0; i < v.size(); i++)
-        v[i] = dual(av[i]);
-    return v;
+vector<dual> dual_vec(vec& sv) {
+    auto dv = vector<dual>(sv.size());
+    transform(sv.begin(), sv.end(), dv.begin(),
+              [](const double s){ return dual(s); });
+    return dv;
+}
+
+vec single_vec(vector<dual>& dv) {
+    auto sv = vec(dv.size());
+    transform(dv.begin(), dv.end(), sv.begin(),
+              [](const dual& d){ return d.r; });
+    return sv;
 }
 
 }
