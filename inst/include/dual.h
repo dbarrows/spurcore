@@ -57,6 +57,15 @@ template <typename A>
 inline dual operator*(const A &a, const dual &x) {
     return x*a;
 }
+inline vector<dual> operator*(const dual &x, const vector<dual>& v) {
+    auto xv = vector<dual>(v.size());
+    transform(v.begin(), v.end(), xv.begin(),
+              [x](const dual& ve){ return x*ve; });
+    return xv;
+}
+inline vector<dual> operator*(const vector<dual>& v, const dual &x) {
+    return x*v;
+}
 
 // --- / ----------------------------------------
 inline dual operator/(const dual &x, const dual &y) {
