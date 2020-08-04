@@ -114,7 +114,7 @@ vector<dual> dual_vec(vec& sv) {
 }
 
 vec single_vec(vector<dual>& dv) {
-    auto sv = vec(dv.size());
+    vec sv = vec(dv.size());
     transform(dv.begin(), dv.end(), sv.begin(),
               [](const dual& d){ return d.r; });
     return sv;
