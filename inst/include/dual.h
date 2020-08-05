@@ -37,6 +37,16 @@ inline vector<dual> operator+(const vector<dual>& xv, const vector<dual>& yv) {
         v[i] = xv[i] + yv[i];
     return v;
 }
+inline dual& operator+=(dual& x, const dual& y){
+    x.r += y.r;
+    x.e += y.e;
+    return x;
+}
+inline vector<dual>& operator+=(vector<dual>& x, const vector<dual>& y){
+    for (uint i = 0; i < x.size(); i++)
+        x[i] += y[i];
+    return x;
+}
 
 // --- - ----------------------------------------
 inline dual operator-(const dual& x, const dual& y) {
