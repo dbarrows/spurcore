@@ -106,14 +106,14 @@ inline ostream& operator<<(ostream& os, const dual& x) {
 
 // --- arma converters ----------------------------------------------------------------------------
 
-inline vector<dual> dual_vec(const vec& sv) {
+inline vector<dual> dual_vec(vec sv) {
     auto dv = vector<dual>(sv.size());
     transform(sv.begin(), sv.end(), dv.begin(),
               [](const double s){ return dual(s); });
     return dv;
 }
 
-inline vec single_vec(const vector<dual>& dv) {
+inline vec single_vec(vector<dual> dv) {
     vec sv = vec(dv.size());
     transform(dv.begin(), dv.end(), sv.begin(),
               [](const dual& d){ return d.r; });
