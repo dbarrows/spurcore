@@ -1,7 +1,7 @@
 #pragma once
 
 #include <RcppArmadillo.h>
-#include <array3.h>
+#include "array3.h"
 
 namespace core {
 
