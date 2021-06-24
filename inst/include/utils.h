@@ -8,7 +8,7 @@ using namespace std;
 using namespace arma;
 
 inline double scale(double t, double lower, double upper) {
-    return (t - lower) / (upper - lower);
+    return (t - lower)/(upper - lower);
 }
 
 template <typename T>
@@ -17,8 +17,13 @@ inline T interp(double w, T lower, T upper) {
 }
 
 inline vec seq(double start, double stop, unsigned int length_out) {
-    auto seq_R = Rcpp::Function("seq");
-    return Rcpp::as<vec>(seq_R(start, stop, Rcpp::_["length.out"] = length_out));
+    vec s = vec(length_out);
+    s[0] = start;
+    double step = (stop - start)/static_cast<double>(length_out - 1);
+    for (uint i = 1; i < length_out - 1; i++)
+        s[i] = start + step*i;
+    s[length_out - 1] = stop;
+    return s
 }
 
 template <typename VOUT, typename VIN>
