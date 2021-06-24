@@ -16,6 +16,13 @@ inline double rnorm(double mean, double sd) {
     return R::rnorm(mean, sd);
 }
 
+inline vec rnorm(vec mean, vec sd) {
+    vec r = vec(mean.size());
+    for (uint i = 0; i < r.size(); i++)
+        r[i] = rnorm(mean[i], sd[i]);
+    return r;
+}
+
 inline double dnorm(double x, double mean, double sd, bool log = false) {
     return R::dnorm(x, mean, sd, log);
 }
