@@ -6,6 +6,7 @@ namespace core {
 
 using namespace std;
 using namespace arma;
+using uint = unsigned int;
 
 inline double scale(double t, double lower, double upper) {
     return (t - lower)/(upper - lower);

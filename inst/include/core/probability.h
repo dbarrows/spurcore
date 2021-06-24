@@ -4,6 +4,8 @@
 
 namespace core {
 
+using uint = unsigned int;
+
 inline double runif() {
     return R::runif(0, 1);
 }

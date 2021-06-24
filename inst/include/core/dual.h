@@ -6,6 +6,7 @@ namespace core {
 
 using namespace std;
 using namespace arma;
+using uint = unsigned int;
 
 // --- definition ---------------------------------------------------------------------------------
 
