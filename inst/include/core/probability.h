@@ -44,6 +44,7 @@ public:
         random_device rd;
         gen = mt19937(rd());
     }
+    ~rng();
     virtual double next() = 0;
 protected:
     mt19937 gen;
