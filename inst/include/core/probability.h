@@ -1,9 +1,11 @@
 #pragma once
 
 #include <RcppArmadillo.h>
+#include <random>
 
 namespace core {
 
+using namespace std;
 using uint = unsigned int;
 
 inline double runif() {
@@ -35,5 +37,41 @@ inline vec dnorm(vec x, vec mean, vec sd, bool log = false) {
         p[i] = dnorm(x[i], mean[i], sd[i], log);
     return p;
 }
+
+class rng {
+public:
+    rng() {
+        random_device rd;
+        gen = mt19937(rd());
+    }
+    virtual double next() = 0;
+protected:
+    mt19937 gen;
+};
+
+class uniform_rng : rng {
+public:
+    uniform_rng() {
+        dist = uniform_real_distribution<>(0, 1);
+    }
+    double next() {
+        return dist(gen);
+    }
+private:
+    uniform_real_distribution<> dist;
+};
+
+class normal_rng : rng {
+public:
+    normal_rng() {
+        dist = normal_distribution<>(0, 1);
+    }
+    double next() {
+        return dist(gen);
+    }
+private:
+    normal_distribution<> dist;
+};
+
 
 }
