@@ -44,34 +44,20 @@ public:
         random_device rd;
         gen = mt19937(rd());
     }
-    ~rng() {};
-    virtual double next() = 0;
+    double uniform(double min = 0, double max = 1) {
+        return u(gen, uniform_real_distribution<>::param_type(min, max));
+    }
+    double normal(double mean = 0, double sd = 1) {
+        return n(gen, normal_distribution<>::param_type(mean, sd));
+    }
+    int poisson(double lambda = 1) {
+        return p(gen, poisson_distribution<>::param_type(lambda));
+    }
 protected:
+    uniform_real_distribution<> u;
+    normal_distribution<> n;
+    poisson_distribution<> p;
     mt19937 gen;
-};
-
-class uniform_rng : rng {
-public:
-    uniform_rng() {
-        dist = uniform_real_distribution<>(0, 1);
-    }
-    double next() {
-        return dist(gen);
-    }
-private:
-    uniform_real_distribution<> dist;
-};
-
-class normal_rng : rng {
-public:
-    normal_rng() {
-        dist = normal_distribution<>(0, 1);
-    }
-    double next() {
-        return dist(gen);
-    }
-private:
-    normal_distribution<> dist;
 };
 
 
