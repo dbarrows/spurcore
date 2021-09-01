@@ -42,6 +42,7 @@ public:
     T& operator [](uvec3 i) { return data[index(i)]; }
 
     array3<T>& operator=(const array3<T>& other);
+    array3<T>& operator+=(const array3<T>& other);
 };
 
 template <typename T>
@@ -86,6 +87,13 @@ array3<T> operator+(const array3<T>& x, const array3<T>& y) {
     for (uint i = 0; i < out.size(); i++)
         out[i] += y[i];
     return out;
+}
+
+template <typename T>
+array3<T>& array3<T>::operator+=(const array3<T>& other){
+    for (uint i = 0; i < data.size(); i++)
+        data[i] += other.data[i];
+    return *this;
 }
 
 template <typename T>
