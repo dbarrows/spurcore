@@ -97,6 +97,14 @@ array3<T>& array3<T>::operator+=(const array3<T>& other){
 }
 
 template <typename T>
+array3<T> operator-(const array3<T>& x, const array3<T>& y) {
+    auto out = x;
+    for (uint i = 0; i < out.size(); i++)
+        out[i] -= y[i];
+    return out;
+}
+
+template <typename T>
 array3<T> round(const array3<T>& x) {
     auto out = x;
     for (uint i = 0; i < out.size(); i++)
