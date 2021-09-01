@@ -38,6 +38,14 @@ inline vec dnorm(vec x, vec mean, vec sd, bool log = false) {
     return p;
 }
 
+template <typename T>
+inline array3<double> dnorm(array3<T> x, array3<T> mean, array3<T> sd, bool log = false) {
+    auto p = array3<double>(x.dims);
+    for (uint i = 0; i < p.size(); i++)
+        p[i] = dnorm(x[i], mean[i], sd[i], log);
+    return p;
+}
+
 class rng {
 public:
     rng() {

@@ -129,6 +129,14 @@ array3<T> sqrt(const array3<T>& x) {
 }
 
 template <typename T>
+T sum(const array3<T>& x) {
+    auto out = T();
+    for (uint i = 0; i < out.size(); i++)
+        out += x[i];
+    return out;
+}
+
+template <typename T>
 static vector<T> flatten(array3<vector<T>>& a) {
     auto v = vector<T>();
     for (uint i = 0; i < a.size(); i++)
