@@ -61,15 +61,23 @@ array3<T>& array3<T>::operator=(const array3<T>& other) {
 }
 
 template <typename T>
-array3<T> operator*(float x, array3<T>& a) {
+array3<T> operator*(double x, array3<T>& a) {
     auto out = a;
     for (uint i = 0; i < a.size(); i++)
         out[i] = x*a[i];
     return out;
 }
 template <typename T>
-array3<T> operator*(array3<T>& a, float x) {
+array3<T> operator*(array3<T>& a, double x) {
     return x*a;
+}
+
+template <typename T>
+array3<T> operator/(array3<T>& a, double x) {
+    auto out = a;
+    for (uint i = 0; i < a.size(); i++)
+        out[i] = a[i]/x;
+    return out;
 }
 
 template <typename T>
@@ -88,13 +96,31 @@ array3<T> round(const array3<T>& x) {
     return out;
 }
 
-template <typename S>
-static vector<S> flatten(array3<vector<S>>& a) {
-    auto v = vector<S>();
+template <typename T>
+array3<T> square(const array3<T>& x) {
+    auto out = x;
+    for (uint i = 0; i < out.size(); i++)
+        out[i] = square(x[i]);
+    return out;
+}
+
+template <typename T>
+array3<T> sqrt(const array3<T>& x) {
+    auto out = x;
+    for (uint i = 0; i < out.size(); i++)
+        out[i] = sqrt(x[i]);
+    return out;
+}
+
+template <typename T>
+static vector<T> flatten(array3<vector<T>>& a) {
+    auto v = vector<T>();
     for (uint i = 0; i < a.size(); i++)
         for (uint j = 0; j < a[i].size(); j++)
             v.push_back(a[i][j]);
     return v;
 }
+
+
 
 }
