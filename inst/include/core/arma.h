@@ -30,7 +30,7 @@ struct less<typename arma::uvec3> {
     bool operator() (const typename arma::uvec3& a, const typename arma::uvec3& b) const{
         return a[2] < b[2] ||
             (a[2] == b[2] && a[1] < b[1]) ||
-            (a[2] == b[2] && a[2] == b[2] && a[0] < b[0]);
+            (a[2] == b[2] && a[1] == b[1] && a[0] < b[0]);
     }
 };
 
