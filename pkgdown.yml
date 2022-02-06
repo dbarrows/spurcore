@@ -1,8 +1,8 @@
-pandoc: 2.7.3
+pandoc: 2.14.2
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-02-06T20:39Z
+last_built: 2022-02-06T21:17Z
 urls:
   reference: http://dexter.barrows.io/spurcore/reference
   article: http://dexter.barrows.io/spurcore/articles
