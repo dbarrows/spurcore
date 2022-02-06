@@ -1,10 +1,6 @@
-#' [`spurcore`] package
-#'
-#' Core classes and utilities for spur packages
-#'
-#' @docType package
-#' @name spurcore
-#' 
+#' @keywords internal
+"_PACKAGE"
+
 #' @import Rcpp
 #' @importFrom Rcpp evalCpp
 #' @importFrom methods new
