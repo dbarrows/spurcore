@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://dexter.barrows.io/spurcore/404.html</loc>
+  </url>
+  <url>
+    <loc>http://dexter.barrows.io/spurcore/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>http://dexter.barrows.io/spurcore/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>http://dexter.barrows.io/spurcore/authors.html</loc>
+  </url>
+  <url>
     <loc>http://dexter.barrows.io/spurcore/index.html</loc>
   </url>
   <url>
-    <loc>http://dexter.barrows.io/spurcore/reference/spurcore.html</loc>
+    <loc>http://dexter.barrows.io/spurcore/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>http://dexter.barrows.io/spurcore/reference/spurcore-package.html</loc>
   </url>
   <url>
     <loc>http://dexter.barrows.io/spurcore/reference/volume.html</loc>
