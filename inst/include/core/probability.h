@@ -14,6 +14,10 @@ public:
         random_device rd;
         gen = mt19937(rd());
     }
+    rng(uint seed) {
+        gen = mt19937(seed);
+    }
+
     double uniform(double min = 0, double max = 1) {
         return u(gen, uniform_real_distribution<>::param_type(min, max));
     }
